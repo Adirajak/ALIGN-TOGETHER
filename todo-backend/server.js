@@ -35,13 +35,9 @@ app.use('/api/todos', require('./routes/todoRoutes'));
 
 const PORT = process.env.PORT || 5000;
 
-// Only listen when not in serverless environment
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(PORT, () => {
-    console.log(`\n✅ Server is running on http://localhost:${PORT}`);
-    console.log(`📋 Task Manager API ready\n`);
-  });
-}
+app.listen(PORT, () => {
+  console.log(`\n✅ Server is running on port ${PORT}`);
+  console.log(`📋 Task Manager API ready\n`);
+});
 
-// Export for Vercel serverless
 module.exports = app;
