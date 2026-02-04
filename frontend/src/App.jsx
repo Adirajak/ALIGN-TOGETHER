@@ -9,14 +9,14 @@ const App = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-slate-100 flex items-center justify-center">
-        <div className="text-gray-600">Loading...</div>
+      <div style={{ minHeight: '100vh', backgroundColor: '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ color: '#4b5563' }}>Loading...</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div style={{ minHeight: '100vh', backgroundColor: '#f1f5f9' }}>
       <Routes>
         <Route
           path="/"
